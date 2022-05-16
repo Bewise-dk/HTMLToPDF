@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>ce2d26b5-9c6e-4071-8fa7-18ad8c9a994c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\pdfs\**" />
+    <Content Remove="wwwroot\pdfs\**" />
+    <EmbeddedResource Remove="wwwroot\pdfs\**" />
+    <None Remove="wwwroot\pdfs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bewise.DanDomainApiV2" Version="1.2.0" />
+    <PackageReference Include="GhostScript.NetCore" Version="1.0.1" />
+    <PackageReference Include="Google.Apis.Gmail.v1" Version="1.56.0.2510" />
+    <PackageReference Include="itext7.pdfhtml" Version="4.0.0" />
+    <PackageReference Include="MailKit" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.10" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+</Project>
